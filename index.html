@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apata Israel resume-personal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Adeniji-Apata Israel</h1>
+         <hr>
+        <a href="#">israelrock43@gmail.com</a>
+    </header>
+    <!-- <nav>
+        
+    </nav> -->
+    <button class="nav-icon" onclick="togglemenu()"><img src="./reorder-three-sharp.svg" alt="icon" class="icon-img"></button>
+    <div class="nav-menu" id="navmenu">
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <section class="about-section" id="about">
+        <h2>Objective</h2>
+        <article>Motivated Computer Science undergraduate. Passionate about full stack programming with growing
+            proficiency in front-end
+            and back-end technologies. Eager to contribute to dynamic projects while honing skills in scalable
+            application
+            development, responsive design, and modern frameworks.</article>
+
+        <h2>Education</h2>
+        <article>
+            Koladaisi University
+            Ibadan, Nigeria <br>
+            Bachelor of Science– Computer Science Expected Graduation 2027
+        </article>
+
+    </section>
+    <section>
+        <h2>TECHNICAL SKILLS</h2>
+        <article><strong>Languages/Tools:</strong> Html, Css, Bootstrap, Javascript. <br>
+            <strong>Platform:</strong> Windows
+            Development Tool: Visual studio code <br>
+            <strong>Emerging Interest:</strong> full stack programmer
+        </article>
+    </section>
+    <section>
+        <h2>WORK EXPERIENCE</h2>
+        <strong>Cyphernet</strong>
+        <br> <br>
+        <p> <strong>Intern July 2023 to September 2023</strong></p>
+        <ul>
+            <li>Developed and styled responsive front-end interfaces using HTML, CSS, Bootstrap</li>
+
+            <li>Implemented minor back-end functionalities with JavaScript</li>
+
+            <li>Built responsive pages and components using React within Visual Studio Code</li>
+
+            <li>Collaborated with development teams to align UI/UX with project goals</li>
+        </ul>
+
+
+    </section>
+
+
+    <section id="gallery" class="galler-section">
+        <h2>Photo Gallery</h2>
+        <div class="gallery">
+            <img src="/img1.jpeg" alt="Photo 1">
+            <img src="/img2.jpeg" alt="Photo 2">
+            <img src="/img 3.jpeg" alt="Photo 3">
+            <img src="/img4.jpeg" alt="Photo 4">
+            <img src="/img5.jpeg" alt="Photo 5">
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p><strong>Email:</strong><a href="israelrock43@gmail.com" style="color: black;"> israelrock43@gmail.com</a> </p>
+        <p><strong>Phone:</strong> +2349069436741</p>
+        <p><strong>indeed:</strong> <a href="https://secure.indeed.com/account/logout?hl=en_NG&co=NG&continue=https%3A%2F%2Fmessages.indeed.com%2Fconversations%2F%3Ffrom%3Dgnav-util-homepage%26gnavTK%3D1j07oe38rj0ik802%26tk%3D1j07oe386iai1800%26co%3DNG%26hl%3Den%26filter%3DInbox&tmpl=desktop&from=gnav-util-messaging--messaging-webapp"
+                target="_blank">View Profile</a></p>
+    </section>
+
+    <footer>
+        <p>© 2025 Adeniji Apata Israel All rights reserved.</p>
+    </footer>
+    <script>window.onload = function () {
+            alert("Welcome to Adeniji-Apata Israel personal website!");
+            const header = document.querySelector("header h1");
+            header.addEventListener("click", function () {
+                header.style.color = "#0077cc";
+                alert("You clicked my name!");
+            });
+        };
+
+
+        document.querySelectorAll("nav a").forEach(link => {
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute("href").substring(1);
+                const target = document.getElementById(targetId);
+                if (target) {
+                    target.scrollIntoView({ behavior: "smooth" });
+                }
+            });
+        });
+
+        const skillsSection = document.querySelector("section:nth-of-type(2)");
+        skillsSection.addEventListener("mouseenter", () => {
+            skillsSection.style.backgroundColor = "#f0f8ff";
+        });
+        skillsSection.addEventListener("mouseleave", () => {
+            skillsSection.style.backgroundColor = "white";
+        });
+
+        function togglemenu() {
+            const menu = document.getElementById('navmenu');
+            menu.style.display = menu.style.display === 'flex' ? 'none':'flex';
+        }
+          window.onclick = function (e) {
+                const navIcon = document.querySelector('.nav-icon');
+                const navMenu = document.getElementById('navMenu');
+                if (!navMenu.contains(e.target) && !navIcon.contains(e.target)) {
+                    navMenu.style.display = 'none';
+                }
+            };
+
+
+
+    </script>
+
+
+</body>
+
+</html>
